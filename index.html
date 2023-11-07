@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>脳トレジャンケン</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="point" id="point"></div>
+    <div class="timeLimit" id="timeLimit"></div>
+  </header>
+  <main>
+    <section class="modeSelect" id="modeSelect">
+      <h1 class="mainTitle" id="mainTitle"></h1>
+      <h2 class="modeSelectTitle" id="modeSelectTitle"></h2>
+      <div class="selectButtons">
+        <div class="easyModeSet">
+          <button class="easyMode" id="easyMode"></button><button class="help" id="easyModeHelp"></button>
+        </div>
+        <div class="normalModeSet">
+          <button class="normalMode" id="normalMode"></button><button class="help" id="normalModeHelp"></button>
+        </div>
+        <div class="hardModeSet">
+          <button class="hardMode" id="hardMode"></button><button class="help" id="hardModeHelp"></button>
+        </div>
+      </div>
+    </section>
+    <section class="easyHelper" id="easyHelper">
+      <button class="close"></button>
+    </section>
+    <section class="normalHelper" id="normalHelper">
+      <button class="close"></button>
+    </section>
+    <section class="hardHelper" id="hardHelper">
+      <button class="close"></button>
+    </section>
+    <section class="preparation" id="preparation">
+      <div class="preparationWords" id="preparationWords"></div>
+      <button class="go" id="go"></button>
+    </section>
+    <section class="gameMain" id="gameMain">
+      <div class="enemyHand" id="enemyHand"></div>
+      <div class="order" id="order"></div>
+      <div class="answer" id="answer"></div>
+      <div class="playerHand">
+        <button class="button_1 selectButton" id="button_1"></button>
+        <button class="button_2 selectButton" id="button_2"></button>
+        <button class="button_3 selectButton" id="button_3"></button>
+      </div>
+    </section>
+    <section class="endDisplay" id="endDisplay">
+      <div class="endWord" id="endWord"></div>
+    </section>
+    <section class="resultDisplay" id="resultDisplay">
+      <div class="brainOld" id="brainOld"></div>
+      <div class="result" id="result"></div>
+      <button class="end" id="end"></button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Keita Nakao</p>
+  </footer>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+@charset "UTF-8";
+body {
+  font-family: Noto Serif JP, sans-serif;
+  background-color: #FFFFFF;
+}
+main {
+  text-align: center;
+  overflow: hidden;
+}
+footer {
+  text-align: center;
+}
+
+/* モードセレクト画面 */
+.selectButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+}
+.easyMode, .normalMode, .hardMode {
+  font-family: Cherry Bomb One, sans-serif;
+  font-size: 30px;
+  color: #FFFFFF;
+  border: 3px solid #748E46;
+  background-color: #265772;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 150px;
+  height: 50px;
+}
+.mainTitle {
+  font-size: 30px;
+  color: #2E2E2E;
+  margin: 30px 0;
+}
+.modeSelectTitle {
+  font-size: 20px;
+  color: #866910;
+  margin: 50px 0;
+}
+.easyModeSet {
+  display: flex;
+}
+.normalModeSet {
+  display: flex;
+}
+.hardModeSet {
+  display: flex;
+}
+.help {
+  margin: 12px 30px;
+  border: 2px solid #9B4B68;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: #265772;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: Bebas Neue, sans-serif;
+}
+
+/* ヘルプ画面 */
+.easyHelper, .normalHelper, .hardHelper {
+  margin-top: 100px;
+  font-size: 20px;
+  color: #2E2E2E;
+}
+.easyHelper p, .normalHelper p, .hardHelper p {
+  margin-bottom: 30px;
+}
+.close {
+  margin-top: 50px;
+  border: 2px solid #9B4B68;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  background-color: #265772;
+  color: #FFFFFF;
+}
+
+/* 準備エリア */
+.preparationWords {
+  margin: 50px 0 150px 0;
+  font-size: 70px;
+  color: #9B4B68;
+  font-family: Bebas Neue, sans-serif;
+  letter-spacing: 5px;
+}
+.preparation .go {
+  display: block;
+  margin: auto;
+}
+.go {
+  font-size: 70px;
+  color: #FFFFFF;
+  font-family: Bebas Neue, sans-serif;
+  border: 3px solid #748E46;
+  background-color: #265772;
+  border-radius: 10px;
+  width: 250px;
+  letter-spacing: 5px;
+}
+
+/* メイン画面 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2E2E2E;
+}
+.timeLimit {
+  color: #9B4B68;
+}
+.point {
+  color: #265772;
+}
+.enemyHand {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+.enemyHand img{
+  width: 200px;
+  height: 200px;
+  border: 2px solid #748E46;
+  border-radius: 10px;
+}
+.order {
+  margin: 30px 0;
+  font-size: 40px;
+  color: #2E2E2E;
+}
+.playerHand {
+  display: flex;
+  justify-content: space-between;
+}
+.playerHand button {
+  margin: 30px 5px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.button_1 {
+  border: 2px solid #9B4B68;
+}
+.button_2 {
+  border: 2px solid #866910;
+}
+.button_3 {
+  border: 2px solid #265772;
+}
+.playerHand button img {
+  width: 100%;
+}
+.answer {
+  margin: auto;
+  width: 90px;
+  height: 90px;
+}
+.answer img {
+  width: 100%;
+}
+
+/* 終了画面 */
+.endDisplay {
+  margin-top: 100px;
+}
+.endWord {
+  font-size: 30px;
+  color: #9B4B68;
+}
+.endWord p {
+  margin-bottom: 50px;
+}
+/* 結果画面 */
+.resultDisplay {
+  margin: 100px 0;
+}
+.brainOld {
+  font-size: 35px;
+  color: #9B4B68;
+  margin-bottom: 40px;
+}
+.result p {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.end {
+  width: 200px;
+  height: 70px;
+  margin-top: 50px;
+  font-size: 40px;
+  color: #FFFFFF;
+  border: 3px solid #748E46;
+  background-color: #265772;
+  border-radius: 10px;
+}
