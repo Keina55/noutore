@@ -71,600 +71,142 @@ class HardMode {
   nextGame() {
     this.button1Elm.addEventListener('click', () => {
       if (this.button1Elm.innerHTML === '<img src="./img/janken_gu.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushGuJudgeProcess();
       } else if (this.button1Elm.innerHTML === '<img src="./img/janken_choki.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushChokiJudgeProcess();
       } else if (this.button1Elm.innerHTML === '<img src="./img/janken_pa.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushPaJudgeProcess();
       }
-      this.pointElm.innerHTML = `現在${this.totalPoint}ポイント`;
-      this.enemyHandElm.innerHTML = '';
-      this.orderElm.innerHTML = '';
-      this.enemyHandElm.innerHTML = this.enemyHand[Math.floor(Math.random() * this.enemyHand.length)];
-      this.orderElm.innerHTML = this.order[Math.floor(Math.random() * this.order.length)];
-      this.hand = this.shuffleHand(this.hand);
-      this.button1Elm.innerHTML = this.hand[0];
-      this.button2Elm.innerHTML = this.hand[1];
-      this.button3Elm.innerHTML = this.hand[2];
+      this.displayProcess();
     });
 
     this.button2Elm.addEventListener('click', () => {
       if (this.button2Elm.innerHTML === '<img src="./img/janken_gu.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushGuJudgeProcess();
       } else if (this.button2Elm.innerHTML === '<img src="./img/janken_choki.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushChokiJudgeProcess();
       } else if (this.button2Elm.innerHTML === '<img src="./img/janken_pa.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushPaJudgeProcess();
       }
-      this.pointElm.innerHTML = `現在${this.totalPoint}ポイント`;
-      this.enemyHandElm.innerHTML = '';
-      this.orderElm.innerHTML = '';
-      this.enemyHandElm.innerHTML = this.enemyHand[Math.floor(Math.random() * this.enemyHand.length)];
-      this.orderElm.innerHTML = this.order[Math.floor(Math.random() * this.order.length)];
-      this.hand = this.shuffleHand(this.hand);
-      this.button1Elm.innerHTML = this.hand[0];
-      this.button2Elm.innerHTML = this.hand[1];
-      this.button3Elm.innerHTML = this.hand[2];
+      this.displayProcess();
     });
 
     this.button3Elm.addEventListener('click', () => {
       if (this.button3Elm.innerHTML === '<img src="./img/janken_gu.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushGuJudgeProcess();
       } else if (this.button3Elm.innerHTML === '<img src="./img/janken_choki.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushChokiJudgeProcess();
       } else if (this.button3Elm.innerHTML === '<img src="./img/janken_pa.png">') {
-        if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
-          if (this.orderElm.innerHTML === '勝って！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
-          if (this.orderElm.innerHTML === '負けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
-          if (this.orderElm.innerHTML === '引き分けて！') {
-            this.totalPoint++;
-            this.correctAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/maru.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-          } else {
-            this.unCorrectAudio();
-            this.answerElm.innerHTML = '';
-            this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
-            setTimeout(() => {
-              this.answerElm.innerHTML = '';
-            }, 500);
-            if (this.totalPoint > 0) {
-              this.totalPoint--;
-            }
-          }
-        }
+        this.pushPaJudgeProcess();
       }
-      this.pointElm.innerHTML = `現在${this.totalPoint}ポイント`;
-      this.enemyHandElm.innerHTML = '';
-      this.orderElm.innerHTML = '';
-      this.enemyHandElm.innerHTML = this.enemyHand[Math.floor(Math.random() * this.enemyHand.length)];
-      this.orderElm.innerHTML = this.order[Math.floor(Math.random() * this.order.length)];
-      this.hand = this.shuffleHand(this.hand);
-      this.button1Elm.innerHTML = this.hand[0];
-      this.button2Elm.innerHTML = this.hand[1];
-      this.button3Elm.innerHTML = this.hand[2];
+      this.displayProcess();
     });
+  }
+
+  // 正答時のアクション
+  correctAction() {
+    this.correctAudio();
+    this.totalPoint++;
+    this.answerElm.innerHTML = '';
+    this.answerElm.innerHTML = '<img src="./img/maru.png" />';
+    setTimeout(() => {
+      this.answerElm.innerHTML = '';
+    }, 500);
+  }
+
+  // 不正答時のアクション
+  unCorrectAction() {
+    this.unCorrectAudio();
+    this.answerElm.innerHTML = '';
+    this.answerElm.innerHTML = '<img src="./img/batsu.png" />';
+    setTimeout(() => {
+      this.answerElm.innerHTML = '';
+    }, 500);
+    if (this.totalPoint > 0) {
+      this.totalPoint--;
+    }
+  }
+
+  // メインゲーム画面の処理
+  displayProcess() {
+    this.pointElm.innerHTML = `現在${this.totalPoint}ポイント`;
+    this.enemyHandElm.innerHTML = '';
+    this.orderElm.innerHTML = '';
+    this.enemyHandElm.innerHTML = this.enemyHand[Math.floor(Math.random() * this.enemyHand.length)];
+    this.orderElm.innerHTML = this.order[Math.floor(Math.random() * this.order.length)];
+    this.hand = this.shuffleHand(this.hand);
+    this.button1Elm.innerHTML = this.hand[0];
+    this.button2Elm.innerHTML = this.hand[1];
+    this.button3Elm.innerHTML = this.hand[2];
+  }
+
+  // グーが押されたときの処理
+  pushGuJudgeProcess() {
+    if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
+      if (this.orderElm.innerHTML === '引き分けて！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
+      if (this.orderElm.innerHTML === '勝って！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
+      if (this.orderElm.innerHTML === '負けて！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    }
+  }
+
+  // チョキが押されたときの処理
+  pushChokiJudgeProcess() {
+    if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
+      if (this.orderElm.innerHTML === '負けて！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
+      if (this.orderElm.innerHTML === '引き分けて！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
+      if (this.orderElm.innerHTML === '勝って！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    }
+  }
+
+  // パーが押されたときの処理
+  pushPaJudgeProcess() {
+    if (this.enemyHandElm.innerHTML === '<img src="./img/janken_gu.png">') {
+      if (this.orderElm.innerHTML === '勝って！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_choki.png">') {
+      if (this.orderElm.innerHTML === '負けて！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    } else if (this.enemyHandElm.innerHTML === '<img src="./img/janken_pa.png">') {
+      if (this.orderElm.innerHTML === '引き分けて！') {
+        this.correctAction();
+      } else {
+        this.unCorrectAction();
+      }
+    }
   }
 
   // 自分の手をランダムに配置するためのメソッド
